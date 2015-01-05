@@ -1,3 +1,3 @@
 function FirstCtrl($scope){
-    $scope.data = {message: "Hello"};
+    $scope.data = {message: "label"};
 }
