@@ -9,6 +9,18 @@ myApp.factory('Avengers', function () {
         }, {
             name: 'Bruce Banner',
             character: 'The Incredible Hulk'
+        }, {
+            name: 'Nick Fury',
+            character: 'Nick Fury'
+        }, {
+            name: 'Billy Jo',
+            character: 'Hawkeye'
+        }, {
+            name: 'Steve Rogers',
+            character: 'Captain America'
+        }, {
+            name: 'Thor',
+            character: 'Thor'
         }
     ];
     return Avengers;
