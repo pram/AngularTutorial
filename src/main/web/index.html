@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html xmlns:ng="http://angularjs.org" ng-app="myApp">
+<html>
 <head>
     <title>AngularJS Tutorials</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/foundation/5.5.0/css/foundation.min.css">
@@ -7,15 +7,19 @@
 </head>
 <body>
 
-<div>
+<div ng-app="myApp">
     <div ng-controller="FirstCtrl">
         <input type="text" ng-model="data.message">
-        <h1>{{data.message}}</h1>
+        <h1>{{ data.message }}</h1>
     </div>
     <div ng-controller="SecondCtrl">
         <input type="text" ng-model="data.message">
-        <h1>{{ reversedMessage(data.message) }}</h1>
+        <h1>{{ data.message | reverse  }}</h1>
     </div>
+    <!--<div ng-controller="ThirdCtrl">
+        <input type="text" ng-model="data.message">
+        <h1>{{ data.message | reverse2  }}</h1>
+    </div>-->
 </div>
 
 
