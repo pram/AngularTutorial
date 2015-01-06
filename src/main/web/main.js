@@ -1,3 +1,7 @@
-function FirstCtrl($scope){
-    $scope.data = {message: "label"};
+function FirstCtrl($scope) {
+
+}
+
+function SecondCtrl($scope) {
+
 }
