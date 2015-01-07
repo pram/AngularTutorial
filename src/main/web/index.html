@@ -7,12 +7,17 @@
 </head>
 <body>
 
-<div ng-app="phoneApp">
-    <div ng-controller="AppCtrl">
-        <panel>
-            <div class="button">Click me!</div>
-        </panel>
-    </div>
+<div ng-app="app">
+    <clock timezone="MST"></clock>
+    <panel title="I'm a title">
+        <clock timezone="PST"></clock>
+    </panel>
+    <panel title="I'm a title">
+        <clock timezone="PST"></clock>
+        <clock timezone="PST"></clock>
+        <clock timezone="PST"></clock>
+        <clock timezone="PST"></clock>
+    </panel>
 </div>
 
 
