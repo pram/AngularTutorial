@@ -1,16 +1,14 @@
-var app = angular.module("app", []);
+var app = angular.module('drinkApp', []);
 
-app.config(function($routeProvider){
-    $routeProvider.when("/",
-        {
-            templateUrl: "app.html",
-            controller: "AppCtrl"
-        }
-    );
-});
+app.controller("AppCtrl", function ($scope) {
+    $scope.ctrlFlavor = "blackberry";
+})
 
-app.controller("AppCtrl", function($scope){
-    $scope.model = {
-        message: "This is my app!!!"
-    }
+app.directive("drink", function () {
+    return {
+        scope: {
+            flavor: "="
+        },
+        template: '<input type="text" ng-model="flavor">'
+    };
 });
