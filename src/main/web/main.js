@@ -1,19 +1,15 @@
-var app = angular.module("superhero", [])
+var app = angular.module('twitterApp', []);
 
-app.directive("superman", function(){
-    return {
-        restrict: "A",
-        link: function(){
-            alert("I'm working stronger");
-        }
-    };
-});
+app.controller("AppCtrl", function ($scope) {
+    $scope.loadMoreTweets = function () {
+        alert("Loading tweets!");
+    }
+})
 
-app.directive("flash", function(){
-    return {
-        restrict: "A",
-        link: function(){
-            alert("I'm working faster");
-        }
-    };
-});
+app.directive("enter", function () {
+    return function (scope, element, attrs) {
+        element.bind("mouseenter", function () {
+            scope.loadMoreTweets();
+        })
+    }
+})
