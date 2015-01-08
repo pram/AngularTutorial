@@ -1,21 +1,16 @@
-app.controller('AppController', function($scope){
-    $scope.leaveVoicemail = function(number, message){
-        alert('Number: ' + number + ' said: ' + message);
-    };
-});
-//fdfd
-app.directive('phone', function(){
-    return {
-        restrict: 'E',
-        scope: {
-            number: '@',
-            network: '=',
-            makeCall: '&'
-        },
-        templateUrl: 'phone.html',
-        link: function(scope){
-            scope.networks = ["Verizon", "AT&T", "Sprint"];
-            scope.network = scope.networks[0];
+var app = angular.module("app", []);
+
+app.config(function($routeProvider){
+    $routeProvider.when("/",
+        {
+            templateUrl: "app.html",
+            controller: "AppCtrl"
         }
-    };
+    );
+});
+
+app.controller("AppCtrl", function($scope){
+    $scope.model = {
+        message: "This is my app!!!"
+    }
 });
