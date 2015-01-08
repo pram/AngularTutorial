@@ -8,7 +8,16 @@
 <body>
 
 <div ng-app="app">
-    <dumb-password></dumb-password>
+    <div ng-repeat="item in 'somewords'.split('')">
+        {{$index + 1}}. {{item}}
+    </div>
+</div>
+
+<div ng-app="app">
+    <div class="button" ng-repeat="item in 'somewords'.split('')" ng-click="ev = $event">
+        {{$index + 1}}. {{item}}
+        {{ev.pageX}}
+    </div>
 </div>
 
 
