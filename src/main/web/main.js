@@ -1,9 +1,7 @@
-var app = angular.module('phoneApp', []);
+var app = angular.module("app", [])
 
-app.controller("AppCtrl", function ($scope) {
-    this.sayHi = function () {
-        alert("hi");
+app.controller("RoomCtrl", function(){
+    this.openDoor= function(){
+        alert("creak");
     };
-
-    return $scope.AppCtrl = this;
-});;
+});
